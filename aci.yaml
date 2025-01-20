@@ -1,0 +1,23 @@
+apiVersion: 2019-12-01
+location: australiaeast
+name: terraformRunnerGroup
+properties:
+  containers:
+  - name: terraform-runner-01
+    properties:
+      image: hashicorp/tfc-agent:latest
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 2
+  - name: terraform-runner-01
+    properties:
+      image: hashicorp/tfc-agent:latest
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 2
+  osType: Linux
+  ipAddress:
+    type: private
+type: Microsoft.ContainerInstance/containerGroups
